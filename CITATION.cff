@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the author and title below and include the Git commit used."
+type: software
+title: "Problem No Problem Mathic: current-state existential folding and verified semantic closure"
+authors:
+  - family-names: "Gattenby"
+    given-names: "Virgil Lee"
+repository-code: "https://github.com/TRYX-Relay/TRYX-PNP-MATHIC"
+url: "https://github.com/TRYX-Relay/TRYX-PNP-MATHIC/tree/main/publications/pnp-mathic"
+abstract: "Research draft with the PNP score, current-state Boolean folding benchmark, independent checks, and formal semantic proofs."

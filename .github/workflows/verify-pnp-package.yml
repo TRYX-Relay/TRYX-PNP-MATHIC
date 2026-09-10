@@ -1,0 +1,22 @@
+name: Verify PNP publication package
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - 'publications/pnp-mathic/**'
+      - 'charts/pnp/**'
+      - 'verification/tryx-lean/**'
+      - '.github/workflows/verify-pnp-package.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check sources, replay, independent oracle, and negative control
+        run: python3 publications/pnp-mathic/check_package.py

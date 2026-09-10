@@ -1,0 +1,9 @@
+{
+  "checked_initial_and_intermediate_states": true,
+  "disagreements": 0,
+  "folds": 53706,
+  "formulas": 17902,
+  "negative_control": "OR replaced with AND: DETECTED",
+  "sat": 16241,
+  "unsat": 1661
+}
