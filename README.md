@@ -15,7 +15,7 @@ CONVENTIONAL_P_EQUALS_NP = NOT_ESTABLISHED
 CLAIM_PROMOTION = NONE
 ```
 
-This repository is the complete public review surface for the current Problem No Problem release. Review, reproduction, citation, audit, and challenge do not require another TRYX research repository.
+This repository is the complete public review surface for the current Problem No Problem release. Review, reproduction, citation, audit, and challenge do not require another TRYX research release.
 
 ## Claim firewall
 
@@ -25,20 +25,22 @@ Passing CI, the finite benchmark, the MATHIC score, or Lean acceptance does not 
 
 ## Canonical review route
 
-1. **Canonical MATHIC score:** [TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html](charts/pnp/TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html)
-2. **Governing source:** [TRYX.PNP.CONTINUITY.CLOSURE.REINTRODUCTION.BENCHMARK.260831.235122Z.md](publications/pnp-mathic/sources/TRYX.PNP.CONTINUITY.CLOSURE.REINTRODUCTION.BENCHMARK.260831.235122Z.md)
-3. **Conventional manuscript:** [MANUSCRIPT.md](publications/pnp-mathic/MANUSCRIPT.md)
-4. **Lean formalization scope:** [PNP.md](verification/tryx-lean/PNP.md)
-5. **Lean proof source:** [TryxProof.lean](verification/tryx-lean/TryxProof.lean)
-6. **Lean + independent-checker receipt:** [PNP_LEAN_VERIFICATION.RECEIPT.md](review/PNP_LEAN_VERIFICATION.RECEIPT.md)
-7. **Finite replay evidence:** [replay-result.json](publications/pnp-mathic/replay-result.json) and [independent-result.json](publications/pnp-mathic/independent-result.json)
-8. **Reviewer manifest:** [PNP_REVIEW_PACKET_v1_0.MANIFEST.md](review/PNP_REVIEW_PACKET_v1_0.MANIFEST.md)
-9. **Parked release record:** [PNP_REVIEW_RELEASE_v1_0.PARKED.md](review/PNP_REVIEW_RELEASE_v1_0.PARKED.md)
-10. **Fortress closeout:** [PNP_PUBLIC_FORTRESS_CLOSEOUT_v1_0.md](review/PNP_PUBLIC_FORTRESS_CLOSEOUT_v1_0.md)
-11. **Citation:** [CITATION.cff](CITATION.cff)
-12. **Provenance:** [PROVENANCE.md](PROVENANCE.md)
+1. **Canonical MATHIC score:** [`TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html`](charts/pnp/TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html)
+2. **Governing source:** [`TRYX.PNP.CONTINUITY.CLOSURE.REINTRODUCTION.BENCHMARK.260831.235122Z.md`](publications/pnp-mathic/sources/TRYX.PNP.CONTINUITY.CLOSURE.REINTRODUCTION.BENCHMARK.260831.235122Z.md)
+3. **Conventional manuscript:** [`MANUSCRIPT.md`](publications/pnp-mathic/MANUSCRIPT.md)
+4. **Lean formalization scope:** [`PNP.md`](verification/tryx-lean/PNP.md)
+5. **Lean proof source:** [`TryxProof.lean`](verification/tryx-lean/TryxProof.lean)
+6. **Lean + independent-checker receipt:** [`PNP_LEAN_VERIFICATION.RECEIPT.md`](review/PNP_LEAN_VERIFICATION.RECEIPT.md)
+7. **Finite replay evidence:** [`replay-result.json`](publications/pnp-mathic/replay-result.json) and [`independent-result.json`](publications/pnp-mathic/independent-result.json)
+8. **Reviewer manifest:** [`PNP_REVIEW_PACKET_v1_1.MANIFEST.md`](review/PNP_REVIEW_PACKET_v1_1.MANIFEST.md)
+9. **Local build receipt:** [`PNP_LOCAL_FORTRESS_BUILD_v1_1.RECEIPT.md`](review/PNP_LOCAL_FORTRESS_BUILD_v1_1.RECEIPT.md)
+10. **Parked release record:** [`PNP_REVIEW_RELEASE_v1_1.PARKED.md`](review/PNP_REVIEW_RELEASE_v1_1.PARKED.md)
+11. **Fortress closeout:** [`PNP_PUBLIC_FORTRESS_CLOSEOUT_v1_1.md`](review/PNP_PUBLIC_FORTRESS_CLOSEOUT_v1_1.md)
+12. **GitHub storefront patch:** [`PNP_GITHUB_STOREFRONT_PATCH_v1_0.md`](review/PNP_GITHUB_STOREFRONT_PATCH_v1_0.md)
+13. **Citation:** [`CITATION.cff`](CITATION.cff)
+14. **Provenance:** [`PROVENANCE.md`](PROVENANCE.md)
 
-Current GitHub release: [v1.0.0 — Problem No Problem Mathic: Local Closure and Lean Verification](https://github.com/TRYX-Relay/TRYX-PNP-MATHIC/releases/tag/v1.0.0)
+Historical v1.0 review receipts and the fortress build contract remain preserved under `review/` as provenance.
 
 ## Verified mathematical scope
 
@@ -86,29 +88,14 @@ Two active PNP CI paths are authoritative:
 - `.github/workflows/verify-pnp-package.yml` — finite package replay, independent oracle, source-integrity checks, and negative control.
 - `.github/workflows/verify-pnp-lean.yml` — pinned Lean build plus Comparator/nanoda independent checking of the accepted proof project.
 
-The preserved `.github/workflows/verify-tryx-formulas.yml` is historical/manual only. The accepted proof project contains three older Navier-Stokes accounting statements alongside the three PNP statements because that is the byte-preserved project that received the independent checker acceptance. Those co-resident statements are not PNP results and are not a cross-release review dependency.
+Public standalone revalidation run `34790598360` passed both the Lean build job `103813972219` and independent job `103814291339`.
 
-Accepted PNP verification source commit: `496c55eb628588d1afbb49233ab8b91ddb82a271`.
+The historical accepted source verification remains commit `496c55eb628588d1afbb49233ab8b91ddb82a271`, workflow run `34445813111`, independent job `102771173054`.
 
-Accepted workflow run: `34445813111`.
-
-Independent checker job: `102771173054`.
-
-Lean toolchain: `4.34.0-rc2`.
-
-Mathlib revision: `85e3a25e006c35636f0e53b0e9296caca2685bc0`.
-
-See the [verification receipt](review/PNP_LEAN_VERIFICATION.RECEIPT.md) for exact pins, theorem scope, kernel acceptance, independent-checker acceptance, and audit notes.
+The preserved `.github/workflows/verify-tryx-formulas.yml` is historical/manual only. Its co-resident older accounting statements are preservation baggage in the accepted checker project, not PNP premises and not a cross-release review dependency.
 
 ## Independent review
 
-A challenge to this release should identify the exact layer under review:
+A challenge to this release should identify the exact layer under review: locked score/source semantics, Lean theorem translation, Lean kernel acceptance, Comparator/nanoda checking, finite replay/negative control, or the still-open complexity obligations.
 
-- locked score/source semantics;
-- Lean theorem translation;
-- Lean kernel acceptance;
-- Comparator/nanoda independent checking;
-- finite replay or negative control;
-- representation-size, normalization, witness-reconstruction, or standard-machine runtime obligations.
-
-When reporting a result, include the repository commit, command or workflow, input, and observed output. The open complexity obligations are part of the public claim boundary, not hidden assumptions.
+When reporting a result, include the repository commit, command or workflow, input, and observed output.

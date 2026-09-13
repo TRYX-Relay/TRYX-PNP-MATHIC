@@ -1,0 +1,37 @@
+{
+  "schema": "TRYX.PNP.PUBLIC.FORTRESS.EXPORT.v1.1",
+  "date": "2026-09-13",
+  "repository": "TRYX-Relay/TRYX-PNP-MATHIC",
+  "base_commit": "b71012c6d9570e722e86b8a9d89ac43a3a623752",
+  "base_tree": "e9d22cd44a16d89bc83888f4a217a20faecaeacc",
+  "export_files": {
+    "README.md": {"sha256": "58f7e6c024b1262a63d1e22287d4192ab3c1399d718ce93d11761fef16bcbf87", "mode": "100644"},
+    "CITATION.cff": {"sha256": "e66edec2accd98df4eb2997ced1bbd110e1dac79174a1de6e076288147fed2f3", "mode": "100644"},
+    "PROVENANCE.md": {"sha256": "c2fb3deeca4beb895a35742378a9d79eefd5e7cb39ce276295d42ebbe34ff4a1", "mode": "100644"},
+    "review/PNP_REVIEW_PACKET_v1_1.MANIFEST.md": {"sha256": "dd709a0dd248e5a8ead01d5d58e170b86e2249f08eb27c2ec412d13b3ae7d0b8", "mode": "100644"},
+    "review/PNP_LOCAL_FORTRESS_BUILD_v1_1.RECEIPT.md": {"sha256": "c36ad629f4d15db0892b9c575773a909cf44fa0a772207f06e56ff2e2873a66e", "mode": "100644"},
+    "review/PNP_REVIEW_RELEASE_v1_1.PARKED.md": {"sha256": "ec8fe828441598698a4a4f4bdd9ee21152e1d5b8172bc01f98664d034e4d86bb", "mode": "100644"},
+    "review/PNP_PUBLIC_FORTRESS_CLOSEOUT_v1_1.md": {"sha256": "b0af436f5a8835b3edd40242a45d059fec32376e46478609d35ee771bc2cdbef", "mode": "100644"},
+    "review/PNP_GITHUB_STOREFRONT_PATCH_v1_0.md": {"sha256": "846889c9eb1b0a76b3d91183e63b4dbd52b6de62c2ae4902f0546c315d918b27", "mode": "100644"},
+    "review/PNP_LOCAL_REPLAY_v1_1.json": {"sha256": "eb105f1a34c516a5aa7670531a881289acc38f61de646170c565dc2257e61cad", "mode": "100644"},
+    "review/PNP_LOCAL_INDEPENDENT_v1_1.json": {"sha256": "354de2d5013500d8f1a1111f32e3764ddeff53e6b2a6106d03a0c75ac4e2e56a", "mode": "100644"},
+    "review/PNP_BASE_TREE_v1_1.json": {"sha256": "659a46b31c4f0f2b21ee5d204dd2d7b1e0161ee118a8d183026e906fb3b17233", "mode": "100644"},
+    "publications/pnp-mathic/SHA256SUMS.json": {"sha256": "2f51399bdad5bef2aa51b3abf0f0c3ac56c36a9575307c30537e0b6ab511fb31", "mode": "100644"}
+  },
+  "validation_only_local_copies": {
+    "publications/pnp-mathic/replay.py": "3628c40b86bee61cecf882b61ac8f2c63a18362eb243b312cd652302dedee834",
+    "publications/pnp-mathic/independent_check.py": "7c73bd7b9b10cd6539cbb8d4ba584b3cfcaa3ec92baec21ef7a81ee7caf914ec",
+    "verification/tryx-lean/TryxProof.lean": "6f033b4106665a9815c44646eb82a6fbc8dae472819d87b66e365f5bfb304348"
+  },
+  "claim_boundary": {
+    "finite_carrier_existential_semantics": "LEAN_VERIFIED",
+    "finite_package_replay": "VERIFIED",
+    "standard_machine_polynomial_runtime_bound": "OPEN",
+    "conventional_p_equals_np": "NOT_ESTABLISHED",
+    "claim_promotion": "NONE"
+  },
+  "notes": [
+    "Export manifest is intentionally not listed inside SHA256SUMS.json to avoid a checksum cycle.",
+    "Locked mathematical authorities are inherited from the pinned base tree and are not rewritten by the export."
+  ]
+}

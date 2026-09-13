@@ -1,0 +1,15 @@
+{
+  "admissible_clauses": 26,
+  "atomic_cycles": 53706,
+  "failures": 0,
+  "formulas": 17902,
+  "local_atomic_enaid_closure": "PASS",
+  "origin": "0D_DISTINCTION",
+  "physical_clock_governor": false,
+  "receipt_sha256": "ab288f8537ce5ddacc12daa995a456ffebad609e9d10da0456658db86ac5c2dd",
+  "sat_terminals": 16241,
+  "schema": "TRYX.PNP.CONTINUITY.BENCHMARK.REPLAY.v1",
+  "sequential_branch_queue": false,
+  "snowman_dependencies": 0,
+  "unsat_terminals": 1661
+}

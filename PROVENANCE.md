@@ -1,60 +1,48 @@
-# Export provenance
+# Problem No Problem export provenance
 
 Author: Virgil Lee Gattenby. Standalone public-fortress successor prepared 2026-09-13.
 
-The Problem No Problem public package was exported from the broader TRYX-MATHIC source history and then separated into `TRYX-Relay/TRYX-PNP-MATHIC` so that public review no longer requires another research repository.
+The Problem No Problem public package was separated from the broader TRYX-MATHIC engineering history into `TRYX-Relay/TRYX-PNP-MATHIC` so that public review no longer requires another research release.
 
 ## Source lineage
 
-The accepted PNP Lean source commit is:
+The accepted PNP Lean source commit is `496c55eb628588d1afbb49233ab8b91ddb82a271`. It was verified by source workflow run `34445813111`; build job `102770247621` and independent job `102771173054` succeeded.
 
-```text
-496c55eb628588d1afbb49233ab8b91ddb82a271
-```
+The standalone public repository subsequently re-ran the preserved proof project through the PNP-specific workflow. Public revalidation run `34790598360` passed build job `103813972219` and independent Comparator/nanoda job `103814291339`.
 
-That commit was verified in the source repository by workflow run `34445813111`; build job `102770247621` and independent job `102771173054` both succeeded. The exported public proof project preserves the accepted PNP proof source and dependency pins. Historical source-repository links are provenance only, not operational review dependencies.
+Historical source-repository references are provenance only, not operational review dependencies.
 
-The standalone export also records the earlier source merge lineage through merge commit `d5385a5c594b21e52df940929db4e72de3d6fe2e` / PR #33.
-
-## Byte-preserved authorities
-
-The canonical locked MATHIC score and governing benchmark source retain their historical bytes:
+## Byte-preserved mathematical authorities
 
 ```text
 SCORE = charts/pnp/TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html
+SCORE_SHA256 = 95b63f3ce280a494ac1be28d222bd03bc1da010e17ec6be3a1ba3438687073fb
 GOVERNING_SOURCE = publications/pnp-mathic/sources/TRYX.PNP.CONTINUITY.CLOSURE.REINTRODUCTION.BENCHMARK.260831.235122Z.md
 GOVERNING_SOURCE_SHA256 = 9a611f7c1ae0d3a1f299411d83146dfbd7ddf8b7bd693b9fddd20f7d1badaa3a
+MANUSCRIPT_SHA256 = 55db0ec8fdd5157b5b9dc8fde594e87d4b679f8a3e83109f975dc80c807c5154
+TRYX_PROOF_SHA256 = 6f033b4106665a9815c44646eb82a6fbc8dae472819d87b66e365f5bfb304348
 ```
 
-Historical locked files may use older `ENAID` spelling. New fortress-facing documentation uses `ENIAD`.
+Historical locked files may use older `ENAID` spelling. New fortress-facing material uses `ENIAD`.
+
+## Local fortress assembly
+
+The v1.1 fortress successor was assembled locally as an overlay on public base commit `b71012c6d9570e722e86b8a9d89ac43a3a623752`. The local build reproduced the 17,902-formula / 53,706-fold benchmark and the independent intermediate-state oracle, detected the OR-to-AND negative control, and audited the preserved Lean solution source for `sorry`, `admit`, and project `axiom` declarations.
+
+The export manifest records which files are newly published by the local successor and which mathematical authorities are inherited unchanged from the pinned base tree.
 
 ## Verification-project provenance
 
-The accepted proof project contains three older Navier-Stokes accounting lemmas together with the three PNP lemmas. They remain in the exported project to preserve the exact accepted checker surface. They are not counted as PNP results, are not required mathematical premises for the PNP statements, and do not create a Navier-Stokes public-release dependency.
+The accepted proof project contains three older accounting lemmas together with the three PNP lemmas. They remain to preserve the exact accepted checker surface. They are not counted as PNP results, are not required premises for the PNP statements, and do not create another public-release dependency.
 
-The PNP theorem scope is documented in `verification/tryx-lean/PNP.md` and the verification receipt in `review/PNP_LEAN_VERIFICATION.RECEIPT.md`.
-
-## Standalone public successors
-
-Fortress-facing editorial successors add:
-
-- a standalone root review route;
-- a dedicated PNP reviewer manifest;
-- a public Lean/Comparator/nanoda receipt;
-- a canonical PNP Lean CI workflow;
-- explicit separation of the historical mixed TRYX workflow;
-- parked-release and fortress-closeout records;
-- a claim firewall preserving the open conventional complexity obligations.
-
-These successors do not mutate the locked mathematical score or governing source.
-
-## Reproducibility boundary
-
-The finite package replay requires Python 3 standard-library modules only. The Lean project downloads externally pinned packages from `lake-manifest.json`; the independent workflow also obtains the pinned Comparator support tools recorded in the verification receipt. Their licenses remain governed by their upstream projects. No new blanket license is assigned by this export.
+## Reproducibility and claim boundary
 
 ```text
 OTHER_PUBLIC_RELEASE_DEPENDENCY = NONE
 CROSS_RELEASE_REVIEW_ROUTING = NONE
+STANDARD_MACHINE_POLYNOMIAL_RUNTIME_BOUND = OPEN
 CONVENTIONAL_P_EQUALS_NP = NOT_ESTABLISHED
 CLAIM_PROMOTION = NONE
 ```
+
+The package proves the stated finite-carrier Boolean semantic result and reproduces the recorded finite benchmark. It does not supply the standard-machine polynomial runtime bound required to establish conventional P=NP.

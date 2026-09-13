@@ -1,0 +1,16 @@
+{
+  "repository": "TRYX-Relay/TRYX-PNP-MATHIC",
+  "base_commit": "b71012c6d9570e722e86b8a9d89ac43a3a623752",
+  "base_tree": "e9d22cd44a16d89bc83888f4a217a20faecaeacc",
+  "inherited_authorities": {
+    "charts/pnp/TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html": {"git_blob":"9be9a578496ed823fceef0e0fda0e20b3b6450c8","sha256":"95b63f3ce280a494ac1be28d222bd03bc1da010e17ec6be3a1ba3438687073fb"},
+    "publications/pnp-mathic/sources/TRYX.PNP.CONTINUITY.CLOSURE.REINTRODUCTION.BENCHMARK.260831.235122Z.md": {"git_blob":"d92e4344e05cb0c3c3460ee75f2b5b1fba005112","sha256":"9a611f7c1ae0d3a1f299411d83146dfbd7ddf8b7bd693b9fddd20f7d1badaa3a"},
+    "publications/pnp-mathic/MANUSCRIPT.md": {"git_blob":"bcd7c6b7d2b7a138fe863d95963bdd9ba917546e","sha256":"55db0ec8fdd5157b5b9dc8fde594e87d4b679f8a3e83109f975dc80c807c5154"},
+    "verification/tryx-lean/TryxProof.lean": {"git_blob":"dfdb5aa06c9db6c872c4e7e58b6c578adb589cc3","sha256":"6f033b4106665a9815c44646eb82a6fbc8dae472819d87b66e365f5bfb304348"},
+    "verification/tryx-lean/PNP.md": {"git_blob":"8481006d44902fbdd49550d3e79594831c4a25c3","sha256":"1ef145954eded07787892d72a5622e3533a57256870aaf76127fdff206d2d893"},
+    "publications/pnp-mathic/replay.py": {"git_blob":"f40947af9de93e5622c78fbd5a4bb4cd0a005dae","sha256":"3628c40b86bee61cecf882b61ac8f2c63a18362eb243b312cd652302dedee834"},
+    "publications/pnp-mathic/independent_check.py": {"git_blob":"ae9d6580ae9f1920fbf4f35643995c447b471599","sha256":"7c73bd7b9b10cd6539cbb8d4ba584b3cfcaa3ec92baec21ef7a81ee7caf914ec"},
+    "publications/pnp-mathic/replay-result.json": {"git_blob":"bc549cd91965582e1763cf129888598ef862214d","sha256":"eb105f1a34c516a5aa7670531a881289acc38f61de646170c565dc2257e61cad"},
+    "publications/pnp-mathic/independent-result.json": {"git_blob":"9b9ca3accc2160cf4ec8a5d93b48c67e12947ce6","sha256":"354de2d5013500d8f1a1111f32e3764ddeff53e6b2a6106d03a0c75ac4e2e56a"}
+  }
+}
