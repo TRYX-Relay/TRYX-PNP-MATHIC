@@ -1,18 +1,21 @@
-# Problem No Problem Mathic
+# Problem No Problem MATHIC
 
-**Author: Virgil Lee Gattenby** — TRYX / ENAID / MATHIC project.
+**Author: Virgil Lee Gattenby** — TRYX / ENIAD / MATHIC.
 
+Standalone public review package — 2026-09-13.
 
-Research publication draft — 2026-09-10.
-
-- [Manuscript: current-state existential folding and verified semantic closure](MANUSCRIPT.md)
-- [Sole active locked Mathic score and lyrics](../../charts/pnp/TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html)
-- [Score authority and historical performance records](../../charts/pnp/README.md)
+- [Canonical locked MATHIC score](../../charts/pnp/TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html)
+- [Research manuscript](MANUSCRIPT.md)
 - [Governing source body](sources/TRYX.PNP.CONTINUITY.CLOSURE.REINTRODUCTION.BENCHMARK.260831.235122Z.md)
-- [Lean proofs](../../verification/tryx-lean/TryxProof.lean) and [formalization scope](../../verification/tryx-lean/PNP.md)
+- [Formalization scope](../../verification/tryx-lean/PNP.md)
+- [Lean proof source](../../verification/tryx-lean/TryxProof.lean)
+- [Lean + independent-checker receipt](../../review/PNP_LEAN_VERIFICATION.RECEIPT.md)
+- [Reviewer packet](../../review/PNP_REVIEW_PACKET_v1_0.MANIFEST.md)
 - [Verification evidence](verification-evidence.json)
-- [Replay result](replay-result.json) and [independent-check result](independent-result.json)
-- [Citation metadata](CITATION.cff)
+- [Finite replay result](replay-result.json)
+- [Independent-check result](independent-result.json)
+- [Repository citation metadata](../../CITATION.cff)
+- [Repository provenance](../../PROVENANCE.md)
 
 From the repository root:
 
@@ -20,10 +23,30 @@ From the repository root:
 python3 publications/pnp-mathic/check_package.py
 ```
 
-The verifier checks hashes, the original finite replay, and a separately generated Boolean-mask oracle covering every intermediate fold. Dependencies are Python 3 standard-library modules only. The HTML chart is a preserved presentation with recorded results; download and open it in a browser to view the score.
+The package verifier checks hashes, the original finite replay, and a separately generated Boolean-mask oracle covering every initial and intermediate fold state. Dependencies for the finite replay are Python 3 standard-library modules only.
 
-For formal verification, follow the pinned [Lean project instructions](../../verification/tryx-lean/README.md). The accepted PNP commit is `496c55eb628588d1afbb49233ab8b91ddb82a271`; its hosted build and independent checker both passed. Historical wording in the original project files may still say verification was pending; the dated evidence record supplies the later result.
+Recorded benchmark:
 
-Suggested citation: Virgil Lee Gattenby. *Problem No Problem Mathic: current-state existential folding and verified semantic closure*. Research manuscript draft, 2026. TRYX-MATHIC, https://github.com/TRYX-Relay/TRYX-MATHIC. Include the exact Git commit used.
+```text
+FORMULAS = 17902
+FOLDS = 53706
+DISAGREEMENTS = 0
+NEGATIVE_CONTROL = OR replaced with AND: DETECTED
+```
 
-The package presents internal continuity closure, finite execution evidence, and universal finite-carrier semantic correctness. It supplies no original-input polynomial runtime bound establishing conventional P=NP.
+The canonical MATHIC chart is a preserved locked presentation. Download/open the HTML in a browser to inspect the score. Its historical bytes are not silently rewritten.
+
+For formal verification, follow the pinned [Lean project instructions](../../verification/tryx-lean/README.md). The accepted source verification commit is `496c55eb628588d1afbb49233ab8b91ddb82a271`; workflow run `34445813111` completed successfully, including the independent Comparator/nanoda path. The public receipt records the exact pins and theorem scope.
+
+Suggested citation: Virgil Lee Gattenby. *Problem No Problem Mathic: current-state existential folding and verified semantic closure*. TRYX-PNP-MATHIC standalone public review package, 2026. Include the exact Git commit used.
+
+## Claim firewall
+
+The package establishes the stated Boolean fold identity, finite-carrier existential semantic theorem, and reproducible finite benchmark. It supplies no standard-machine polynomial runtime bound, representation-size bound, normalization-cost bound, or witness-reconstruction complexity bound establishing conventional P=NP.
+
+```text
+OTHER_PUBLIC_RELEASE_DEPENDENCY = NONE
+CROSS_RELEASE_REVIEW_ROUTING = NONE
+CONVENTIONAL_P_EQUALS_NP = NOT_ESTABLISHED
+CLAIM_PROMOTION = NONE
+```
