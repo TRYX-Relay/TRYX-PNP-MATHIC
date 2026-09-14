@@ -74,6 +74,62 @@ FINAL_GRAPHIC_INSERTION = AFTER_TEXT_AND_STRUCTURE_STABILIZE
 PLACEHOLDER_CROSS_REFERENCES = REQUIRED
 ```
 
+### 5. Reviewer Interactive Sandbox
+
+Develop a browser-openable interactive companion that allows reviewers to directly exercise the finite PNP mechanism rather than only reading static prose.
+
+The sandbox should expose the reviewable semantic machinery already represented in the repository and make intermediate states inspectable.
+
+Required interaction targets:
+
+```text
+INPUT_FORMULA_OR_PRESET = REQUIRED
+STEP_CURRENT_HINGE = REQUIRED
+SHOW_BOOLEAN_SIBLINGS = REQUIRED
+SHOW_CURRENT_STATE = REQUIRED
+SHOW_FOLD_RESULT = REQUIRED
+SHOW_TERMINAL_SAT_UNSAT = REQUIRED
+SHOW_INTERMEDIATE_STATE_HISTORY = REQUIRED
+COMPARE_WITH_INDEPENDENT_ORACLE = REQUIRED
+RESET_AND_REPLAY = REQUIRED
+NEGATIVE_CONTROL_MODE = REQUIRED
+```
+
+The reviewer should be able to:
+
+1. choose a small built-in Boolean/CNF example or enter a supported finite example;
+2. inspect the current variable/address being eliminated;
+3. see both Boolean sibling states at the hinge;
+4. execute one fold at a time or run to terminal state;
+5. inspect the complete sequence of intermediate states;
+6. compare the primary result with an independently implemented oracle;
+7. deliberately activate the preserved negative control, such as replacing OR with AND, and observe the disagreement;
+8. reset and replay without reloading the page.
+
+The sandbox must distinguish demonstration of finite-carrier semantic correctness from the still-open conventional complexity obligations.
+
+```text
+INTERACTIVE_REVIEW_SANDBOX = REQUIRED
+PRIMARY_MODE = STEP_THROUGH_FINITE_SEMANTICS
+INDEPENDENT_ORACLE_COMPARISON = REQUIRED
+NEGATIVE_CONTROL = REQUIRED
+STANDARD_MACHINE_POLYNOMIAL_RUNTIME_PROOF = NOT_CLAIMED
+CONVENTIONAL_P_EQUALS_NP = NOT_ESTABLISHED
+```
+
+The sandbox is a companion review instrument, not a substitute for the manuscript, Lean proof source, replay scripts, or verification receipts.
+
+Preferred delivery form:
+
+```text
+REVIEWER_SANDBOX_FORMAT = SELF_CONTAINED_BROWSER_OPENABLE_HTML
+REMOTE_SERVICE_DEPENDENCY = NONE_PREFERRED
+REPRODUCIBLE_PRESETS = REQUIRED
+SOURCE_VISIBLE_IN_REPOSITORY = REQUIRED
+```
+
+Its visual language may share the paper's notation and figure vocabulary, but interaction design should prioritize auditability over ornament.
+
 ## Construction order
 
 ```text
@@ -82,25 +138,29 @@ PLACEHOLDER_CROSS_REFERENCES = REQUIRED
 3. Build dedicated formula page
 4. Build scientific body text and equations
 5. Insert explicit graphic placeholders at intended figure locations
-6. Resolve section references, figure references, captions, and pagination dependencies
-7. Complete technical review and claim-boundary audit
-8. LOCK SCIENTIFIC PAPER
-9. Build splash page from the locked paper
-10. Insert/finalize publication graphics against locked placeholder positions
-11. Perform final visual/pagination audit
-12. Export publication artifact
+6. Define Reviewer Interactive Sandbox interaction contract and data model
+7. Resolve section references, figure references, captions, and pagination dependencies
+8. Complete technical review and claim-boundary audit
+9. LOCK SCIENTIFIC PAPER
+10. Build splash page from the locked paper
+11. Insert/finalize publication graphics against locked placeholder positions
+12. Build/finalize Reviewer Interactive Sandbox against locked paper semantics
+13. Cross-check sandbox outputs against archived replay/oracle evidence
+14. Perform final visual/pagination and companion-artifact audit
+15. Export publication artifact and reviewer companion
 ```
 
 ## Lock rule
 
 The scientific paper lock freezes the substantive manuscript structure, equations, claims, section order, formula page, table-of-contents hierarchy, figure numbering, captions, and graphic placement slots.
 
-Post-lock splash-page construction and final graphic insertion may improve presentation but must not silently modify the locked mathematical argument or claim boundary.
+Post-lock splash-page construction, final graphic insertion, and reviewer-sandbox presentation work may improve presentation but must not silently modify the locked mathematical argument or claim boundary.
 
 ```text
 PAPER_LOCK_FREEZES_SUBSTANCE = YES
 POST_LOCK_SPLASH_MAY_CHANGE_SUBSTANCE = NO
 POST_LOCK_GRAPHICS_MAY_CHANGE_SUBSTANCE = NO
+POST_LOCK_SANDBOX_MAY_CHANGE_SUBSTANCE = NO
 POST_LOCK_CLAIM_PROMOTION = NO
 ```
 
