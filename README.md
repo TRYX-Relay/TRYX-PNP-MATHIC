@@ -34,13 +34,20 @@ Passing CI, the finite benchmark, the MATHIC score, or Lean acceptance does not 
 7. **Finite replay evidence:** [`replay-result.json`](publications/pnp-mathic/replay-result.json) and [`independent-result.json`](publications/pnp-mathic/independent-result.json)
 8. **Reviewer manifest:** [`PNP_REVIEW_PACKET_v1_1.MANIFEST.md`](review/PNP_REVIEW_PACKET_v1_1.MANIFEST.md)
 9. **Local build receipt:** [`PNP_LOCAL_FORTRESS_BUILD_v1_1.RECEIPT.md`](review/PNP_LOCAL_FORTRESS_BUILD_v1_1.RECEIPT.md)
-10. **Parked release record:** [`PNP_REVIEW_RELEASE_v1_1.PARKED.md`](review/PNP_REVIEW_RELEASE_v1_1.PARKED.md)
-11. **Fortress closeout:** [`PNP_PUBLIC_FORTRESS_CLOSEOUT_v1_1.md`](review/PNP_PUBLIC_FORTRESS_CLOSEOUT_v1_1.md)
-12. **GitHub storefront patch:** [`PNP_GITHUB_STOREFRONT_PATCH_v1_0.md`](review/PNP_GITHUB_STOREFRONT_PATCH_v1_0.md)
-13. **Citation:** [`CITATION.cff`](CITATION.cff)
-14. **Provenance:** [`PROVENANCE.md`](PROVENANCE.md)
+10. **Original development-time provenance:** [`PNP_ORIGINAL_DEVELOPMENT_TIME.RECEIPT_v1_0.md`](review/PNP_ORIGINAL_DEVELOPMENT_TIME.RECEIPT_v1_0.md)
+11. **Parked release record:** [`PNP_REVIEW_RELEASE_v1_1.PARKED.md`](review/PNP_REVIEW_RELEASE_v1_1.PARKED.md)
+12. **Fortress closeout:** [`PNP_PUBLIC_FORTRESS_CLOSEOUT_v1_1.md`](review/PNP_PUBLIC_FORTRESS_CLOSEOUT_v1_1.md)
+13. **GitHub storefront patch:** [`PNP_GITHUB_STOREFRONT_PATCH_v1_0.md`](review/PNP_GITHUB_STOREFRONT_PATCH_v1_0.md)
+14. **Citation:** [`CITATION.cff`](CITATION.cff)
+15. **Provenance:** [`PROVENANCE.md`](PROVENANCE.md)
 
 Historical v1.0 review receipts and the fortress build contract remain preserved under `review/` as provenance.
+
+## Original development chronology
+
+The dedicated provenance receipt reconstructs the original PNP development clock separately from later recovery, formalization, Lean verification, and fortress engineering. The currently recovered active-build start is August 4, 2026 at approximately `16:11:17 AKDT`, and the original internal/local closure endpoint is the August 6 `260806.2134` ENAID execution package. The reconstructed elapsed development span is approximately `53:22:43` (`53.38` hours, `2.22` days), consistent with the user's recollection of about two and one-half days.
+
+This is an elapsed development span, **not** a claim of 53.38 hands-on labor hours. Net invested work hours remain subject to sleep/rest and unrelated-work gap reconstruction. Earlier August 3-4 sizing and ubiquity-mirror runway are preserved as predevelopment provenance rather than silently folded into the formal development stopwatch.
 
 ## Verified mathematical scope
 
