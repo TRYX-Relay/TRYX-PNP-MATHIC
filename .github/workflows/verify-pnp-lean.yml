@@ -59,19 +59,22 @@ jobs:
             assert actual == p['rev'], (p['name'], actual, p['rev'])
             print(p['name'], actual)
         CHECK
-    - name: Audit solution source for sorry, admit, or project axiom declarations
+    - name: Audit solution and MATHIC source for sorry, admit, or project axiom declarations
       working-directory: verification/tryx-lean
       run: |
-        if grep -nE '(^|[[:space:]])(sorry|admit|axiom)[[:space:]]' TryxProof.lean; then
-          echo "Unexpected proof placeholder or project axiom declaration in TryxProof.lean"
+        if grep -nE '(^|[[:space:]])(sorry|admit|axiom)[[:space:]]' TryxProof.lean TryxMathic.lean; then
+          echo "Unexpected proof placeholder or project axiom declaration in PNP Lean sources"
           exit 1
         fi
-    - name: Build accepted proof project
+    - name: Build accepted proof and MATHIC projects
       working-directory: verification/tryx-lean
-      run: lake build TryxProof 2>&1 | tee "$GITHUB_WORKSPACE/verification-logs/build.log"
-    - name: Print theorem axioms
+      run: lake build TryxProof TryxMathic 2>&1 | tee "$GITHUB_WORKSPACE/verification-logs/build.log"
+    - name: Print proof theorem axioms
       working-directory: verification/tryx-lean
-      run: lake env lean TryxProof.lean 2>&1 | tee "$GITHUB_WORKSPACE/verification-logs/axioms.log"
+      run: lake env lean TryxProof.lean 2>&1 | tee "$GITHUB_WORKSPACE/verification-logs/axioms-proof.log"
+    - name: Compile MATHIC bridge and print its theorem axioms
+      working-directory: verification/tryx-lean
+      run: lake env lean TryxMathic.lean 2>&1 | tee "$GITHUB_WORKSPACE/verification-logs/axioms-mathic.log"
     - &logs
       name: Preserve verification logs
       if: always()
@@ -104,6 +107,7 @@ jobs:
         git -C "$RUNNER_TEMP/nanoda" checkout --detach 4c544ed4099c8227f07d5de77ad1e69fb0740a27
         (cd "$RUNNER_TEMP/nanoda" && cargo build --release --locked) 2>&1 | tee "$GITHUB_WORKSPACE/verification-logs/nanoda-build.log"
         ! test -e .lake/build/lib/lean/TryxProof.olean
+        ! test -e .lake/build/lib/lean/TryxMathic.olean
     - name: Independent Comparator and nanoda check
       working-directory: verification/tryx-lean
       run: |
