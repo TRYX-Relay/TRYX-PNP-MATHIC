@@ -92,8 +92,6 @@ FORMAL_ARGUMENT_LOCATION = SCIENTIFIC_PAPER
 REWARD_AFTER_READING = YES
 ```
 
-The sandbox should expose the reviewable finite semantic machinery already represented in the repository and make intermediate states inspectable.
-
 Required interaction targets:
 
 ```text
@@ -120,9 +118,7 @@ The reviewer should be able to:
 7. deliberately activate the preserved negative control, such as replacing OR with AND, and observe the disagreement;
 8. reset and replay without reloading the page.
 
-The reward should open into a useful state immediately. A reviewer should be able to understand what to do without reading another manual. Presets should provide a fast first success, while deeper controls remain available for deliberate inspection.
-
-The sandbox must distinguish demonstration of finite-carrier semantic correctness from the still-open conventional complexity obligations.
+The reward should open into a useful state immediately. Presets should provide a fast first success, while deeper controls remain available for deliberate inspection.
 
 ```text
 INTERACTIVE_REVIEW_SANDBOX = REQUIRED
@@ -133,8 +129,6 @@ NEGATIVE_CONTROL = REQUIRED
 STANDARD_MACHINE_POLYNOMIAL_RUNTIME_PROOF = NOT_CLAIMED
 CONVENTIONAL_P_EQUALS_NP = NOT_ESTABLISHED
 ```
-
-The sandbox is a companion review instrument and reviewer reward, not a substitute for the manuscript, Lean proof source, replay scripts, or verification receipts.
 
 Preferred delivery form:
 
@@ -149,37 +143,215 @@ OPTIONAL_DEEP_INSPECTION = REQUIRED
 
 Its visual language may share the paper's notation and figure vocabulary, but interaction design should prioritize clarity, tactile exploration, and auditability over ornament.
 
+## ANEA-derived reviewer architecture
+
+The Navier-Stokes ANEA release established several reviewer-facing practices that transfer directly to PNP. These are mandatory for the scientific-paper build.
+
+### A. Explicit review hierarchy
+
+The release must tell the reviewer exactly what to open, in what order, and which surface has what authority.
+
+Target route:
+
+```text
+README / READER'S GUIDE
+  -> SCIENTIFIC PAPER
+  -> DEDICATED FORMULA PAGE
+  -> CANONICAL MATHIC / SOURCE AUTHORITY
+  -> LEAN PROOF + VERIFICATION RECEIPT
+  -> FINITE REPLAY + INDEPENDENT ORACLE
+  -> REVIEWER'S BENCH
+  -> PROVENANCE / DEVELOPMENT RECEIPTS
+```
+
+Role taxonomy:
+
+```text
+AUTHORITATIVE_SOURCE = CANONICAL MATHIC / SOURCE AUTHORITY
+SCIENTIFIC_EXPOSITION = SCIENTIFIC PAPER
+FORMULA_REFERENCE = DEDICATED FORMULA PAGE
+FORMAL_VERIFICATION = LEAN PROOF + RECEIPTS
+REPRODUCIBILITY_EVIDENCE = REPLAY + INDEPENDENT ORACLE
+INTERACTIVE_REVIEW_INSTRUMENT = REVIEWER'S BENCH
+PROVENANCE_RECORD = DEVELOPMENT / ARCHIVE RECEIPTS
+```
+
+The phrase `functional ornamental` is not part of the public-facing PNP role taxonomy.
+
+### B. Terminology boundary table
+
+The paper must explicitly distinguish terms that a reviewer could otherwise conflate.
+
+Minimum required entries:
+
+```text
+HINGE
+BOOLEAN SIBLING STATES
+CURRENT STATE
+FOLD
+EXISTENTIAL ELIMINATION
+FINITE-CARRIER CLOSURE
+SAT TERMINAL
+UNSAT TERMINAL
+LOCAL / INTERNAL CLOSURE
+STANDARD-MACHINE POLYNOMIAL RUNTIME BOUND
+CONVENTIONAL P = NP
+```
+
+The terminology section must state which terms are finite semantic or local execution properties and which are conventional complexity-theory obligations.
+
+```text
+TERMINOLOGY_BOUNDARY_TABLE = REQUIRED
+AMBIGUOUS_CLOSURE_LANGUAGE = PROHIBITED
+```
+
+### C. Claim-to-source map
+
+The scientific paper must contain a reviewer-facing map connecting important claims to their source authority and executable evidence.
+
+Required columns or equivalent fields:
+
+```text
+PAPER_STATEMENT
+CANONICAL_SOURCE_OR_FORMULA
+LEAN_STATUS
+REPLAY_OR_ORACLE_EVIDENCE
+REVIEWER'S_BENCH_SURFACE
+CLAIM_BOUNDARY
+```
+
+At minimum it must map:
+
+1. Boolean fold identity;
+2. hinge existential semantics;
+3. repeated finite existential elimination;
+4. finite SAT/UNSAT terminal semantics;
+5. the recorded `17,902` formula / `53,706` fold benchmark;
+6. the standard-machine polynomial runtime obligation as OPEN.
+
+```text
+CLAIM_TO_SOURCE_MAP = REQUIRED
+TRACEABILITY_FROM_PAPER_TO_EVIDENCE = REQUIRED
+```
+
+### D. Reviewer walkthrough
+
+Create a short reproducible reviewer walkthrough modeled on the useful ANEA demonstration layer.
+
+Target short path:
+
+```text
+1. Open scientific paper and dedicated formula page.
+2. Identify the canonical finite semantic statement.
+3. Open Lean verification receipt.
+4. Show source audit / machine-check status.
+5. Run the package checker.
+6. Show 17,902 formulas / 53,706 folds / zero disagreements.
+7. Open Reviewer's Bench.
+8. Run one small preset.
+9. Activate the negative control.
+10. Finish on the open standard-machine polynomial-runtime gate.
+```
+
+```text
+REVIEWER_WALKTHROUGH = REQUIRED
+SHORT_REVIEW_PATH = REQUIRED
+WALKTHROUGH_MAY_PROMOTE_CLAIMS = NO
+```
+
+### E. Paper-to-Bench notation synchronization
+
+The scientific paper and Reviewer's Bench must use the same notation, variable names, hinge labels, state labels, formula numbering, and visual vocabulary wherever the same mathematical object is being represented.
+
+A reviewer moving from a paper figure or formula into the Bench should recognize the same mechanism immediately.
+
+```text
+PAPER_TO_BENCH_NOTATION_SYNC = REQUIRED
+FORMULA_IDENTIFIER_SYNC = REQUIRED
+STATE_LABEL_SYNC = REQUIRED
+HINGE_LABEL_SYNC = REQUIRED
+FIGURE_TO_INTERACTION_CROSS_REFERENCE = REQUIRED_WHERE_APPLICABLE
+PARALLEL_DRIFTING_NOTATION = PROHIBITED
+```
+
+### F. Negative controls as a first-class review feature
+
+The ANEA packaging demonstrated the value of deliberate corruption tests. PNP must preserve and expose the same philosophy.
+
+The OR-to-AND mutation is the minimum interactive negative control. The paper and walkthrough should explain that this exists to demonstrate checker sensitivity, not as part of the valid mechanism.
+
+```text
+NEGATIVE_CONTROL_DOCUMENTED = REQUIRED
+NEGATIVE_CONTROL_INTERACTIVE = REQUIRED
+NEGATIVE_CONTROL_DISTINGUISHED_FROM_VALID_RUN = REQUIRED
+```
+
+### G. Closed-versus-open visual boundary
+
+The paper should place the strongest established finite result adjacent to the unresolved complexity obligations rather than burying those obligations in end matter.
+
+Required conceptual separation:
+
+```text
+CLOSED / VERIFIED:
+- Boolean fold algebra
+- finite-carrier existential semantics
+- finite SAT/UNSAT terminal semantics
+- recorded finite benchmark
+
+OPEN:
+- representation-size bound
+- normalization-cost bound
+- witness-reconstruction complexity
+- standard-machine polynomial runtime bound
+- conventional P = NP
+```
+
+A dedicated figure placeholder should be reserved for this closed-versus-open map unless a superior presentation is developed before paper lock.
+
+```text
+CLOSED_VS_OPEN_MAP = REQUIRED
+OPEN_OBLIGATIONS_VISIBLE_NEAR_CORE_RESULT = REQUIRED
+```
+
 ## Construction order
 
 ```text
 1. Establish manuscript section hierarchy
-2. Build table of contents framework
-3. Build dedicated formula page
-4. Build scientific body text and equations
-5. Insert explicit graphic placeholders at intended figure locations
-6. Define Reviewer Reward / Interactive Sandbox interaction contract and data model
-7. Resolve section references, figure references, captions, and pagination dependencies
-8. Complete technical review and claim-boundary audit
-9. LOCK SCIENTIFIC PAPER
-10. Build splash page from the locked paper
-11. Insert/finalize publication graphics against locked placeholder positions
-12. Build/finalize Reviewer's Bench against locked paper semantics
-13. Cross-check sandbox outputs against archived replay/oracle evidence
-14. Perform final visual/pagination and companion-artifact audit
-15. Export publication artifact and reviewer companion
+2. Establish explicit review hierarchy and artifact-role taxonomy
+3. Build table of contents framework
+4. Build terminology boundary table
+5. Build dedicated formula page
+6. Build scientific body text and equations
+7. Build claim-to-source map
+8. Insert explicit graphic placeholders, including closed-versus-open map placeholder
+9. Define Reviewer's Bench interaction contract and data model
+10. Synchronize paper notation and Bench notation
+11. Define negative-control presentation and reviewer walkthrough
+12. Resolve section references, figure references, captions, formula identifiers, and pagination dependencies
+13. Complete technical review and claim-boundary audit
+14. LOCK SCIENTIFIC PAPER
+15. Build splash page from the locked paper
+16. Insert/finalize publication graphics against locked placeholder positions
+17. Build/finalize Reviewer's Bench against locked paper semantics
+18. Cross-check Bench outputs against archived replay/oracle evidence
+19. Build/finalize reviewer walkthrough
+20. Perform final visual/pagination, traceability, and companion-artifact audit
+21. Export publication artifact and reviewer companion
 ```
 
 ## Lock rule
 
-The scientific paper lock freezes the substantive manuscript structure, equations, claims, section order, formula page, table-of-contents hierarchy, figure numbering, captions, and graphic placement slots.
+The scientific paper lock freezes the substantive manuscript structure, equations, claims, section order, formula page, table-of-contents hierarchy, terminology boundaries, claim-to-source map, figure numbering, captions, graphic placement slots, and paper-side notation used by the Reviewer's Bench.
 
-Post-lock splash-page construction, final graphic insertion, and reviewer-sandbox presentation work may improve presentation but must not silently modify the locked mathematical argument or claim boundary.
+Post-lock splash-page construction, final graphic insertion, reviewer-sandbox presentation work, and walkthrough production may improve presentation but must not silently modify the locked mathematical argument or claim boundary.
 
 ```text
 PAPER_LOCK_FREEZES_SUBSTANCE = YES
 POST_LOCK_SPLASH_MAY_CHANGE_SUBSTANCE = NO
 POST_LOCK_GRAPHICS_MAY_CHANGE_SUBSTANCE = NO
 POST_LOCK_SANDBOX_MAY_CHANGE_SUBSTANCE = NO
+POST_LOCK_WALKTHROUGH_MAY_CHANGE_SUBSTANCE = NO
 POST_LOCK_CLAIM_PROMOTION = NO
 ```
 
