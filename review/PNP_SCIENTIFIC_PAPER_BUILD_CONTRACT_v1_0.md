@@ -74,11 +74,25 @@ FINAL_GRAPHIC_INSERTION = AFTER_TEXT_AND_STRUCTURE_STABILIZE
 PLACEHOLDER_CROSS_REFERENCES = REQUIRED
 ```
 
-### 5. Reviewer Interactive Sandbox
+### 5. Reviewer Reward / Interactive Sandbox
 
-Develop a browser-openable interactive companion that allows reviewers to directly exercise the finite PNP mechanism rather than only reading static prose.
+Develop a browser-openable interactive companion as a deliberate reward for the reviewer who has worked through the scientific paper.
 
-The sandbox should expose the reviewable semantic machinery already represented in the repository and make intermediate states inspectable.
+The paper carries the formal argument. The interactive companion comes afterward as a small laboratory in which the reviewer can touch the mechanism, change inputs, step through folds, inspect intermediate states, test a negative control, and compare the result against an independent oracle.
+
+The experience should feel optional, immediate, tactile, and revealing rather than like another review obligation. It is not a sales demo, a substitute for the paper, or a shortcut around the mathematical argument.
+
+Preferred presentation identity:
+
+```text
+REVIEWER_REWARD_NAME = REVIEWER'S BENCH
+REVIEWER_REWARD_PROMPT = "You've read the argument. Now try the mechanism yourself."
+PRIMARY_EXPERIENCE = OPTIONAL_HANDS_ON_LAB
+FORMAL_ARGUMENT_LOCATION = SCIENTIFIC_PAPER
+REWARD_AFTER_READING = YES
+```
+
+The sandbox should expose the reviewable finite semantic machinery already represented in the repository and make intermediate states inspectable.
 
 Required interaction targets:
 
@@ -106,10 +120,13 @@ The reviewer should be able to:
 7. deliberately activate the preserved negative control, such as replacing OR with AND, and observe the disagreement;
 8. reset and replay without reloading the page.
 
+The reward should open into a useful state immediately. A reviewer should be able to understand what to do without reading another manual. Presets should provide a fast first success, while deeper controls remain available for deliberate inspection.
+
 The sandbox must distinguish demonstration of finite-carrier semantic correctness from the still-open conventional complexity obligations.
 
 ```text
 INTERACTIVE_REVIEW_SANDBOX = REQUIRED
+REVIEWER_REWARD = REQUIRED
 PRIMARY_MODE = STEP_THROUGH_FINITE_SEMANTICS
 INDEPENDENT_ORACLE_COMPARISON = REQUIRED
 NEGATIVE_CONTROL = REQUIRED
@@ -117,7 +134,7 @@ STANDARD_MACHINE_POLYNOMIAL_RUNTIME_PROOF = NOT_CLAIMED
 CONVENTIONAL_P_EQUALS_NP = NOT_ESTABLISHED
 ```
 
-The sandbox is a companion review instrument, not a substitute for the manuscript, Lean proof source, replay scripts, or verification receipts.
+The sandbox is a companion review instrument and reviewer reward, not a substitute for the manuscript, Lean proof source, replay scripts, or verification receipts.
 
 Preferred delivery form:
 
@@ -126,9 +143,11 @@ REVIEWER_SANDBOX_FORMAT = SELF_CONTAINED_BROWSER_OPENABLE_HTML
 REMOTE_SERVICE_DEPENDENCY = NONE_PREFERRED
 REPRODUCIBLE_PRESETS = REQUIRED
 SOURCE_VISIBLE_IN_REPOSITORY = REQUIRED
+FAST_FIRST_INTERACTION = REQUIRED
+OPTIONAL_DEEP_INSPECTION = REQUIRED
 ```
 
-Its visual language may share the paper's notation and figure vocabulary, but interaction design should prioritize auditability over ornament.
+Its visual language may share the paper's notation and figure vocabulary, but interaction design should prioritize clarity, tactile exploration, and auditability over ornament.
 
 ## Construction order
 
@@ -138,13 +157,13 @@ Its visual language may share the paper's notation and figure vocabulary, but in
 3. Build dedicated formula page
 4. Build scientific body text and equations
 5. Insert explicit graphic placeholders at intended figure locations
-6. Define Reviewer Interactive Sandbox interaction contract and data model
+6. Define Reviewer Reward / Interactive Sandbox interaction contract and data model
 7. Resolve section references, figure references, captions, and pagination dependencies
 8. Complete technical review and claim-boundary audit
 9. LOCK SCIENTIFIC PAPER
 10. Build splash page from the locked paper
 11. Insert/finalize publication graphics against locked placeholder positions
-12. Build/finalize Reviewer Interactive Sandbox against locked paper semantics
+12. Build/finalize Reviewer's Bench against locked paper semantics
 13. Cross-check sandbox outputs against archived replay/oracle evidence
 14. Perform final visual/pagination and companion-artifact audit
 15. Export publication artifact and reviewer companion
