@@ -29,6 +29,31 @@ The v1.1 successor was assembled locally over public base commit `b71012c6d9570e
 
 The PNP-specific public GitHub Actions revalidation run `34790598360` passed both build job `103813972219` and independent Comparator/nanoda job `103814291339`.
 
+## Original development chronology receipt
+
+The closeout now preserves a separate historical timing receipt:
+
+`review/PNP_ORIGINAL_DEVELOPMENT_TIME.RECEIPT_v1_0.md`
+
+That receipt separates predevelopment sizing from the original active PNP build, later recovery, formalization, Lean verification, and public-fortress engineering.
+
+Current reconstructed chronology:
+
+```text
+PREDEVELOPMENT / SIZING = AUGUST 3-4, 2026
+FIRST_RECOVERED_EXPLICIT_ACTIVE_BUILD = 2026-08-04 16:11:17 AKDT
+ORIGINAL_INTERNAL_LOCAL_CLOSURE ~= 2026-08-06 21:34:00 AKDT
+ELAPSED_DEVELOPMENT_SPAN = 53:22:43
+ELAPSED_HOURS ~= 53.38
+ELAPSED_DAYS ~= 2.22
+USER_RECOLLECTION = ABOUT 2.5 DAYS
+NET_INVESTED_WORK_HOURS = PENDING_REST_GAP_RECONSTRUCTION
+```
+
+The original August 6 authority chain remains the closure origin. The later continuity benchmark, MATHIC locks, Lean verification, and public fortress are revalidation/formalization/publication layers and are not used to inflate the original solution-development duration.
+
+The `53.38` hour figure is elapsed development span, not hands-on labor. Net invested hours require separate subtraction of identifiable sleep/rest and unrelated-work intervals while retaining ordinary between-message research time during active sessions.
+
 ## Claim boundary
 
 ```text
