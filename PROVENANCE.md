@@ -46,3 +46,16 @@ CLAIM_PROMOTION = NONE
 ```
 
 The package proves the stated finite-carrier Boolean semantic result and reproduces the recorded finite benchmark. It does not supply the standard-machine polynomial runtime bound required to establish conventional P=NP.
+
+## Interactive instrument successor
+
+On 2026-09-17, the 3E6B Christmas Formula Page was archived as an immutable
+interactive successor without changing the mathematical authorities above.
+
+```text
+INSTRUMENT = charts/pnp/PNP_CODEBREAKER_TRI_E6B_XMAS_FORMULA_PAGE_v64.LOCKED.html
+INSTRUMENT_SHA256 = f8370d9114d730da95914bb3b229e5a8f17ab84b63b64b4edf85168feb7109d4
+LOCK_RECEIPT = review/PNP_3E6B_XMAS_FORMULA_PAGE_v64.LOCK.RECEIPT.md
+CANONICAL_SCORE_MUTATION = NONE
+CLAIM_PROMOTION = NONE
+```

@@ -43,6 +43,15 @@ Passing CI, the finite benchmark, the MATHIC score, or Lean acceptance does not 
 
 Historical v1.0 review receipts and the fortress build contract remain preserved under `review/` as provenance.
 
+## Locked interactive instrument
+
+The archived [`3E6B Christmas Formula Page v64`](charts/pnp/PNP_CODEBREAKER_TRI_E6B_XMAS_FORMULA_PAGE_v64.LOCKED.html)
+is the locked inspectable cipherlogical interface. Its Formula Page expands the
+installed operations into line-by-line V/P/A scores and uses the shared ENIAD
+transport for playback. See the
+[`v64 lock receipt`](review/PNP_3E6B_XMAS_FORMULA_PAGE_v64.LOCK.RECEIPT.md)
+for the byte identity and validation boundary.
+
 ## Original development chronology
 
 The dedicated provenance receipt reconstructs the original PNP development clock separately from later recovery, formalization, Lean verification, and fortress engineering. The currently recovered active-build start is August 4, 2026 at approximately `16:11:17 AKDT`, and the original internal/local closure endpoint is the August 6 `260806.2134` ENAID execution package. The reconstructed elapsed development span is approximately `53:22:43` (`53.38` hours, `2.22` days), consistent with the user's recollection of about two and one-half days.
