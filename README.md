@@ -17,6 +17,16 @@ CLAIM_PROMOTION = NONE
 
 This repository is the complete public review surface for the current Problem No Problem release. Review, reproduction, citation, audit, and challenge do not require another TRYX research release.
 
+## Companion Reader Guide
+
+The eight-page companion README follows the reader-guide format used for the Navier–Stokes paper. It covers reading routes, the PNP mechanism, artifact authority, verification, TRYX / ENIAD terminology, and the recorded build-time and AI-drift metrics.
+
+- [Reader Guide v1.0 — PDF](review/reader-guide/v1_0/Problem_No_Problem_READERS_GUIDE_v1_0.LOCKED.pdf)
+- [Reader Guide v1.0 — DOCX](review/reader-guide/v1_0/Problem_No_Problem_READERS_GUIDE_v1_0.LOCKED.docx)
+- [Lock receipt](review/reader-guide/v1_0/LOCK.json) and [SHA-256 checksums](review/reader-guide/v1_0/SHA256SUMS.json)
+
+This edition is frozen for provenance. Future revisions receive a successor version.
+
 ## Claim firewall
 
 The package proves the stated finite-carrier Boolean semantic result and reproduces the recorded finite benchmark. It does **not** supply the standard-machine polynomial runtime bound required to establish conventional P=NP.

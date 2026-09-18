@@ -1,0 +1,23 @@
+{
+  "title": "Problem No Problem Reader Guide",
+  "version": "1.0",
+  "status": "LOCKED",
+  "locked_at_utc": "2026-09-18T22:30:27.015887+00:00",
+  "author": "Virgil Lee Gattenby",
+  "pages": 8,
+  "scope": "Companion README and reader orientation; artifact lock, not mathematical certification.",
+  "source_draft_library_id": "libfile_10feaa9e1d908191b7e0dda15e633eab",
+  "source_draft_library_version": 1,
+  "reference": "Navier_Stokes_ANEA_PACKET_README_v1_0.LOCKED.docx",
+  "content_change_from_approved_draft": "Review draft label changed to Locked v1.0; body and layout retained.",
+  "validation": [
+    "Eight-page render verified.",
+    "Page 1 inspected after label change.",
+    "Pages 2\u20138 pixel-identical to audited draft render."
+  ],
+  "files_sha256": {
+    "Problem_No_Problem_READERS_GUIDE_v1_0.LOCKED.pdf": "c13b854594b6b633d8723bef0145014e7dbb539879249c5ef81e5c9a5f79deca",
+    "Problem_No_Problem_READERS_GUIDE_v1_0.LOCKED.docx": "a93156b137447992576642fefa50d3d64069de31cc5597ba571ec93e3aec0d6b"
+  },
+  "successor_rule": "Preserve these bytes. Later changes require a new version and lock receipt."
+}
