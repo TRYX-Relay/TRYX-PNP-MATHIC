@@ -6,7 +6,7 @@ authors:
   - family-names: "Gattenby"
     given-names: "Virgil Lee"
 repository-code: "https://github.com/TRYX-Relay/TRYX-PNP-MATHIC"
-url: "https://github.com/TRYX-Relay/TRYX-PNP-MATHIC/tree/main/publications/pnp-mathic"
+url: "https://github.com/TRYX-Relay/TRYX-PNP-MATHIC"
 abstract: "Standalone TRYX / ENIAD / MATHIC research package containing a finite Boolean-fold benchmark, formal finite-carrier semantic proofs, independent checking, and an explicit open conventional complexity boundary."
 keywords:
   - "p-vs-np"

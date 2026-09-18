@@ -1,0 +1,23 @@
+{
+  "title": "Problem No Problem \u2014 audited paginated edition",
+  "author": "Virgil Lee Gattenby",
+  "status": "LOCKED",
+  "locked_at_utc": "2026-09-18T22:03:00.896377+00:00",
+  "lock_scope": "Exact document edition and supporting layout assets; future changes require a successor edition.",
+  "source_library_pdf_version": 6,
+  "repository_parent": "5fb26c715978c76a7bc20c2cef84c24f81d6bcef",
+  "physical_pages": 18,
+  "numbered_pages": 17,
+  "preserved_audit_observations": [
+    "Section 5.1 paragraph continues from page 10 to page 11.",
+    "Proposition 2 ends page 13; its proof begins page 14."
+  ],
+  "validation": [
+    "All references 1\u201316 fit on numbered page 17.",
+    "Contents, bookmarks, and page labels checked.",
+    "All four figures present with original proportions.",
+    "No clipped text, empty formula boxes, or duplicate appendix found in document audit.",
+    "Recent layout edits preserve paragraph and table text."
+  ],
+  "lean_verification": "Not rerun for this document lock; no Lean files changed."
+}

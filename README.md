@@ -1,116 +1,29 @@
-# Problem No Problem / P vs NP — standalone public review fortress
+# Problem No Problem
+
+**Virgil Lee Gattenby**
 
 [![Finite package replay](https://github.com/TRYX-Relay/TRYX-PNP-MATHIC/actions/workflows/verify-pnp-package.yml/badge.svg)](https://github.com/TRYX-Relay/TRYX-PNP-MATHIC/actions/workflows/verify-pnp-package.yml)
-[![PNP Lean + independent checker](https://github.com/TRYX-Relay/TRYX-PNP-MATHIC/actions/workflows/verify-pnp-lean.yml/badge.svg)](https://github.com/TRYX-Relay/TRYX-PNP-MATHIC/actions/workflows/verify-pnp-lean.yml)
+[![Lean and independent checker](https://github.com/TRYX-Relay/TRYX-PNP-MATHIC/actions/workflows/verify-pnp-lean.yml/badge.svg)](https://github.com/TRYX-Relay/TRYX-PNP-MATHIC/actions/workflows/verify-pnp-lean.yml)
 
-**Virgil Lee Gattenby** — TRYX / ENIAD / MATHIC
+**[Read the locked paper — PDF](publications/pnp-mathic/editions/20260918T220300Z/Problem_No_Problem_Paginated.pdf)** · **[Reader Guide — PDF](review/reader-guide/v1_0/Problem_No_Problem_READERS_GUIDE_v1_0.LOCKED.pdf)**
 
-```text
-PUBLIC_OPERATING_MODE = STANDALONE_REVIEW_FORTRESS
-PUBLIC_FORTRESS_TARGET = TRYX-PNP-MATHIC
-CANONICAL_REVIEW_TARGET = Problem_No_Problem_MATHIC
-OTHER_PUBLIC_RELEASE_DEPENDENCY = NONE
-CROSS_RELEASE_REVIEW_ROUTING = NONE
-CONVENTIONAL_P_EQUALS_NP = NOT_ESTABLISHED
-CLAIM_PROMOTION = NONE
-```
+The paper develops exact current-state existential folding on finite Boolean assignment carriers. Its semantic core is machine checked; the finite benchmark reproduces 17,902 formulas and 53,706 folds with zero disagreements. The standard-machine polynomial cost argument required for conventional P=NP remains open.
 
-This repository is the complete public review surface for the current Problem No Problem release. Review, reproduction, citation, audit, and challenge do not require another TRYX research release.
+## Current submission
 
-## Companion Reader Guide
+| Material | Where to start |
+|---|---|
+| Approved paper, four figures and splash | [Locked 18-page edition](publications/pnp-mathic/editions/20260918T220300Z/README.md); [editable DOCX](publications/pnp-mathic/editions/20260918T220300Z/Problem_No_Problem_Layout_Source.docx) |
+| Reading routes, terminology and work metrics | [Reader Guide v1.0](review/reader-guide/v1_0/Problem_No_Problem_READERS_GUIDE_v1_0.LOCKED.pdf) |
+| Mathematical authorities | [Locked MATHIC score](charts/pnp/TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html) and [governing source](publications/pnp-mathic/sources/TRYX.PNP.CONTINUITY.CLOSURE.REINTRODUCTION.BENCHMARK.260831.235122Z.md) |
+| Formal proof and exact checker coverage | [Lean project](verification/tryx-lean/README.md) and [current verification receipt](submission/VERIFICATION.md) |
+| Reproducible benchmark | [Package instructions](publications/pnp-mathic/README.md) |
+| Optional interactive supplement | [Repaired 3E6B v65](charts/pnp/PNP_CODEBREAKER_TRI_E6B_XMAS_FORMULA_PAGE_v65.LOCKED.html) — download and open the HTML |
+| Submission identity and citation | [Submission manifest](submission/MANIFEST.json), [current authority record](submission/AUTHORITY.md), [citation](CITATION.cff) |
 
-The eight-page companion README follows the reader-guide format used for the Navier–Stokes paper. It covers reading routes, the PNP mechanism, artifact authority, verification, TRYX / ENIAD terminology, and the recorded build-time and AI-drift metrics.
+This index selects the current submission. Earlier drafts, build contracts, waypoints and release records are [historical material](archive/README.md), retained for provenance. The September 11 GitHub release `v1.0.0` is historical; it is not the September 18 paper edition. Use the paper and manifest linked above and record the Git commit used.
 
-- [Reader Guide v1.0 — PDF](review/reader-guide/v1_0/Problem_No_Problem_READERS_GUIDE_v1_0.LOCKED.pdf)
-- [Reader Guide v1.0 — DOCX](review/reader-guide/v1_0/Problem_No_Problem_READERS_GUIDE_v1_0.LOCKED.docx)
-- [Lock receipt](review/reader-guide/v1_0/LOCK.json) and [SHA-256 checksums](review/reader-guide/v1_0/SHA256SUMS.json)
-
-This edition is frozen for provenance. Future revisions receive a successor version.
-
-## Claim firewall
-
-The package proves the stated finite-carrier Boolean semantic result and reproduces the recorded finite benchmark. It does **not** supply the standard-machine polynomial runtime bound required to establish conventional P=NP.
-
-Passing CI, the finite benchmark, the MATHIC score, or Lean acceptance does not promote that boundary.
-
-## Canonical review route
-
-1. **Canonical MATHIC score:** [`TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html`](charts/pnp/TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html)
-2. **Governing source:** [`TRYX.PNP.CONTINUITY.CLOSURE.REINTRODUCTION.BENCHMARK.260831.235122Z.md`](publications/pnp-mathic/sources/TRYX.PNP.CONTINUITY.CLOSURE.REINTRODUCTION.BENCHMARK.260831.235122Z.md)
-3. **Conventional manuscript:** [`MANUSCRIPT.md`](publications/pnp-mathic/MANUSCRIPT.md)
-4. **Lean formalization scope:** [`PNP.md`](verification/tryx-lean/PNP.md)
-5. **Lean proof source:** [`TryxProof.lean`](verification/tryx-lean/TryxProof.lean)
-6. **Lean + independent-checker receipt:** [`PNP_LEAN_VERIFICATION.RECEIPT.md`](review/PNP_LEAN_VERIFICATION.RECEIPT.md)
-7. **Finite replay evidence:** [`replay-result.json`](publications/pnp-mathic/replay-result.json) and [`independent-result.json`](publications/pnp-mathic/independent-result.json)
-8. **Reviewer manifest:** [`PNP_REVIEW_PACKET_v1_1.MANIFEST.md`](review/PNP_REVIEW_PACKET_v1_1.MANIFEST.md)
-9. **Local build receipt:** [`PNP_LOCAL_FORTRESS_BUILD_v1_1.RECEIPT.md`](review/PNP_LOCAL_FORTRESS_BUILD_v1_1.RECEIPT.md)
-10. **Original development-time provenance:** [`PNP_ORIGINAL_DEVELOPMENT_TIME.RECEIPT_v1_0.md`](review/PNP_ORIGINAL_DEVELOPMENT_TIME.RECEIPT_v1_0.md)
-11. **Parked release record:** [`PNP_REVIEW_RELEASE_v1_1.PARKED.md`](review/PNP_REVIEW_RELEASE_v1_1.PARKED.md)
-12. **Fortress closeout:** [`PNP_PUBLIC_FORTRESS_CLOSEOUT_v1_1.md`](review/PNP_PUBLIC_FORTRESS_CLOSEOUT_v1_1.md)
-13. **GitHub storefront patch:** [`PNP_GITHUB_STOREFRONT_PATCH_v1_0.md`](review/PNP_GITHUB_STOREFRONT_PATCH_v1_0.md)
-14. **Citation:** [`CITATION.cff`](CITATION.cff)
-15. **Provenance:** [`PROVENANCE.md`](PROVENANCE.md)
-
-Historical v1.0 review receipts and the fortress build contract remain preserved under `review/` as provenance.
-
-## Locked interactive instrument
-
-The archived [`3E6B Christmas Formula Page v64`](charts/pnp/PNP_CODEBREAKER_TRI_E6B_XMAS_FORMULA_PAGE_v64.LOCKED.html)
-is the locked inspectable cipherlogical interface. Its Formula Page expands the
-installed operations into line-by-line V/P/A scores and uses the shared ENIAD
-transport for playback. See the
-[`v64 lock receipt`](review/PNP_3E6B_XMAS_FORMULA_PAGE_v64.LOCK.RECEIPT.md)
-for the byte identity and validation boundary.
-
-## Locked splash poster
-
-The canonical PNP splash artwork is
-[`PNP_SPLASH_POSTER.260918.LOCKED.png`](review/figures/PNP_SPLASH_POSTER.260918.LOCKED.png).
-Its exact byte identity and visual lock are recorded in the
-[`splash-poster lock receipt`](review/PNP_SPLASH_POSTER.260918.LOCK.RECEIPT.md).
-
-## Original development chronology
-
-The dedicated provenance receipt reconstructs the original PNP development clock separately from later recovery, formalization, Lean verification, and fortress engineering. The currently recovered active-build start is August 4, 2026 at approximately `16:11:17 AKDT`, and the original internal/local closure endpoint is the August 6 `260806.2134` ENAID execution package. The reconstructed elapsed development span is approximately `53:22:43` (`53.38` hours, `2.22` days), consistent with the user's recollection of about two and one-half days.
-
-This is an elapsed development span, **not** a claim of 53.38 hands-on labor hours. Net invested work hours remain subject to sleep/rest and unrelated-work gap reconstruction. Earlier August 3-4 sizing and ubiquity-mirror runway are preserved as predevelopment provenance rather than silently folded into the formal development stopwatch.
-
-## Build time and AI drift
-
-AI drift is the worst part of the process, but it is manageable. I keep the accepted source fixed, compare revisions against it, and record the work needed to recover from regressions. Trust is welcome. Receipts are forever.
-
-| Work phase | Recorded metric | What it measures |
-|---|---|---|
-| Original PNP development, August 4–6 | Approximately **53h 22m 43s** | Existing reconstructed elapsed build-to-internal/local-closure interval; not hands-on labor |
-| E6B → TRI-E6B / 3E6B, September 14–17 | **71h 24m 40s** | Earliest recovered saved build to repaired v65 commit; actual initial start and active labor are not established |
-| 3E6B September 17 regression recovery | **6 defect areas; 1h 56m 11s** | One audit-to-repair-commit interval shared by all six defects, not six separately timed repairs or total project drift |
-| Later PNP paper production, September 17–18 | **3h 30m reported lost time** | My retrospective report of paper-recovery work; independently timed start/end boundaries are unavailable |
-
-The original PNP research clock and the later paper-production clock stay separate. Requested features and intentional redesigns are not counted as drift. Total drift hours and active labor remain unmeasured where the record is incomplete; unknown is not zero. No drift percentage is claimed from these mixed timing bases.
-
-See the [work-metrics receipt and incident accounting](review/PNP_3E6B_WORK_METRICS_2026-09-18.md) for timestamped milestones, sources, defect categories, and counting rules.
-
-## Verified mathematical scope
-
-The Lean project contains three PNP statements:
-
-- `TRYX.PNP.boolean_fold_algebra`: Boolean OR agrees with the integer identity `a + b - ab` under Boolean encoding.
-- `TRYX.PNP.hinge_exact`: one current-state hinge is true exactly when one of its two Boolean siblings is true.
-- `TRYX.PNP.resolve_correct`: repeated current-state existential elimination over `Assignment n` is true exactly when a satisfying assignment exists.
-
-The formalization is semantic. It does not bound the size or cost of the represented Boolean function, normalization, witness reconstruction, or execution on a standard machine.
-
-```text
-BOOLEAN_FOLD_IDENTITY = VERIFIED
-FINITE_CARRIER_EXISTENTIAL_SEMANTICS = LEAN_VERIFIED
-SAT_UNSAT_TERMINAL_SEMANTICS = LEAN_VERIFIED
-STANDARD_MACHINE_POLYNOMIAL_RUNTIME_BOUND = OPEN
-REPRESENTATION_SIZE_BOUND = OPEN
-NORMALIZATION_COST_BOUND = OPEN
-WITNESS_RECONSTRUCTION_COMPLEXITY = OPEN
-```
-
-## Finite replay
+## Reproduce
 
 From the repository root:
 
@@ -118,32 +31,23 @@ From the repository root:
 python3 publications/pnp-mathic/check_package.py
 ```
 
-Recorded benchmark:
+This validates the required submission files and their checksums, the preserved package records, the finite replay, the independent intermediate-state oracle and the OR-to-AND negative control. It does not run Lean. For the pinned formal build, follow the [Lean instructions](verification/tryx-lean/README.md).
 
-```text
-FORMULAS = 17,902
-FOLDS = 53,706
-DISAGREEMENTS = 0
-NEGATIVE_CONTROL = OR replaced with AND: DETECTED
-```
+Lean builds `TryxProof` and `TryxMathic`. Comparator/nanoda independently checks the six declarations configured in `TryxProof`, including the three PNP core theorems. The 13 MATHIC bridge declarations are Lean checked; they are not additional Comparator targets. Neither layer supplies a polynomial runtime bound.
 
-The package checker validates source hashes, reruns the archived finite replay, compares a separately generated Boolean-mask oracle across initial and intermediate states, and confirms the negative control.
+## Build time and AI drift
 
-## Machine-verification boundary
+AI drift is the worst part of the process, but it is manageable. I keep the accepted source fixed, compare revisions against it, and record the work needed to recover from regressions. Trust is welcome. Receipts are forever.
 
-Two active PNP CI paths are authoritative:
+| Work phase | Recorded metric |
+|---|---|
+| Original PNP development | Approximately **53h 22m 43s** elapsed; not hands-on labor |
+| E6B → 3E6B saved-build window | **71h 24m 40s**, ending at repaired v65 |
+| 3E6B September 17 recovery | **6 defect areas sharing one 1h 56m 11s recovery interval** |
+| Later PNP paper production | **3h 30m reported lost time**, not independently timed |
 
-- `.github/workflows/verify-pnp-package.yml` — finite package replay, independent oracle, source-integrity checks, and negative control.
-- `.github/workflows/verify-pnp-lean.yml` — pinned Lean build plus Comparator/nanoda independent checking of the accepted proof project.
+These are different clocks. Total drift and active labor remain unknown where evidence is missing; unknown is not zero. See the [work-metrics receipt](review/PNP_3E6B_WORK_METRICS_2026-09-18.md) and [original development-time record](review/PNP_ORIGINAL_DEVELOPMENT_TIME.RECEIPT_v1_0.md).
 
-Public standalone revalidation run `34790598360` passed both the Lean build job `103813972219` and independent job `103814291339`.
+## Review and provenance
 
-The historical accepted source verification remains commit `496c55eb628588d1afbb49233ab8b91ddb82a271`, workflow run `34445813111`, independent job `102771173054`.
-
-The preserved `.github/workflows/verify-tryx-formulas.yml` is historical/manual only. Its co-resident older accounting statements are preservation baggage in the accepted checker project, not PNP premises and not a cross-release review dependency.
-
-## Independent review
-
-A challenge to this release should identify the exact layer under review: locked score/source semantics, Lean theorem translation, Lean kernel acceptance, Comparator/nanoda checking, finite replay/negative control, or the still-open complexity obligations.
-
-When reporting a result, include the repository commit, command or workflow, input, and observed output.
+For a challenge or reproduction result, identify the exact source, theorem, input, repository commit and observed output. [Provenance](PROVENANCE.md) records the preserved source lineage and accepted verification history. Artifact locks freeze bytes; they do not expand mathematical claims.

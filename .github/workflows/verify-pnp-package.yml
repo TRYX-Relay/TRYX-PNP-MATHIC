@@ -2,12 +2,7 @@ name: Verify PNP publication package
 on:
   push:
     branches: [main]
-  pull_request:
-    paths:
-      - 'publications/pnp-mathic/**'
-      - 'charts/pnp/**'
-      - 'verification/tryx-lean/**'
-      - '.github/workflows/verify-pnp-package.yml'
+  pull_request: {}
   workflow_dispatch:
 permissions:
   contents: read

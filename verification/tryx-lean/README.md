@@ -1,80 +1,34 @@
-# Problem No Problem Lean verification project
+# PNP Lean verification
 
-This directory is the preserved Lean 4 proof project used for the public Problem No Problem verification path.
+[Current submission](../../README.md) · [Formalization scope](PNP.md) · [Verification receipt](../../submission/VERIFICATION.md)
 
-The PNP-facing theorem scope is defined in [`PNP.md`](PNP.md) and implemented in [`TryxProof.lean`](TryxProof.lean). The project also contains three older Navier-Stokes accounting lemmas because the accepted source verification was performed on this combined proof project. Those co-resident lemmas are preserved provenance and are not PNP results or public-review dependencies.
+This is the current public PNP proof project. The older private export lacks `TryxMathic.lean`; use this complete directory and its pinned dependencies for the current build.
 
-## PNP theorem scope
+## Coverage
 
-The current PNP formalization verifies:
+| Layer | Files and statements | Verification |
+|---|---|---|
+| PNP semantic core | `TryxProof.lean`: `boolean_fold_algebra`, `hinge_exact`, `resolve_correct` in `TRYX.PNP` | Lean and configured Comparator/nanoda targets |
+| MATHIC bridge | `TryxMathic.lean`: 13 theorem declarations in `TRYX.PNP.Mathic` | Lean compilation and selected axiom reports; not configured as Comparator targets |
+| Historical accounting | Three `TRYX.NS` declarations in `TryxProof.lean` | Preserved accepted Comparator targets; not PNP premises |
 
-1. `TRYX.PNP.boolean_fold_algebra` — Boolean OR under 0/1 integer encoding satisfies `a + b - ab`.
-2. `TRYX.PNP.hinge_exact` — one current-state existential hinge is true exactly when one Boolean sibling is true.
-3. `TRYX.PNP.resolve_correct` — repeated current-state existential elimination over every finite typed assignment carrier is true exactly when a satisfying assignment exists.
+The MATHIC bridge preserves native M0–M9 naming/order and formalizes selected type, rotation, mirror truth and semantic fold/closure facts. Its terminal result delegates to `resolve_correct`. It does not certify the entire notation system, a provenance implementation, a CNF evaluator or polynomial machine cost.
 
-This is a semantic theorem over finite Boolean function carriers. It does not prove a polynomial bound for representation size, substitution, multiplication, normalization, witness reconstruction, or total execution cost on a standard machine. It therefore does not establish conventional P=NP.
+## Reproduce
 
-## Reproduce locally
-
-The project pins Lean and its dependencies. From this directory:
+From this directory, using the pinned toolchain:
 
 ```sh
 lake exe cache get
-lake build TryxProof
+lake build TryxProof TryxMathic
 lake env lean TryxProof.lean
+lake env lean TryxMathic.lean
 ```
 
-Pinned Lean toolchain:
+Lean: `leanprover/lean4:v4.34.0-rc2`. Mathlib revision: `85e3a25e006c35636f0e53b0e9296caca2685bc0`. `lake-manifest.json` pins every package revision. The workflow checks these revisions and confirms the manifest has not changed during dependency fetch.
 
-```text
-leanprover/lean4:v4.34.0-rc2
-```
+[The PNP workflow](../../.github/workflows/verify-pnp-lean.yml) compiles both modules, audits solution files for proof placeholders/project axioms, prints axiom reports and runs Comparator/nanoda in a separate job. `comparator.json` is authoritative for independent-check targets; it currently selects `TryxProof`, not `TryxMathic`.
 
-Pinned Mathlib revision:
+`TryxChallenge.lean` intentionally contains reference-statement `sorry` placeholders. They are not proofs and are isolated from the accepted solution. Do not remove historical declarations from the accepted project as a documentation cleanup.
 
-```text
-85e3a25e006c35636f0e53b0e9296caca2685bc0
-```
-
-## Canonical public CI
-
-The authoritative public PNP formal-verification workflow is:
-
-```text
-.github/workflows/verify-pnp-lean.yml
-```
-
-It builds the preserved solution source, prints theorem axioms, audits `TryxProof.lean` for proof placeholders or project axiom declarations, and runs the independent Comparator + lean4export + nanoda path in a job that does not precompile the solution before Comparator checks it.
-
-The older `.github/workflows/verify-tryx-formulas.yml` remains manual-only as a historical reproduction path for the mixed proof project.
-
-## Accepted verification evidence
-
-The accepted PNP source commit was:
-
-```text
-496c55eb628588d1afbb49233ab8b91ddb82a271
-```
-
-Accepted workflow run:
-
-```text
-34445813111
-```
-
-Build job: `102770247621` — success.
-
-Independent job: `102771173054` — success.
-
-The accepted independent job reported both:
-
-```text
-nanoda kernel accepts the solution
-Lean default kernel accepts the solution
-```
-
-See [`../../review/PNP_LEAN_VERIFICATION.RECEIPT.md`](../../review/PNP_LEAN_VERIFICATION.RECEIPT.md) for the full public receipt and exact claim boundary.
-
-## Challenge file
-
-`TryxChallenge.lean` intentionally contains `sorry` placeholders because it specifies the statements supplied to Comparator. The solution source is `TryxProof.lean`; the public workflow audits that solution file separately. A `sorry` in the challenge specification is therefore not a proof gap in the accepted solution.
+The earlier manual mixed-project workflow is retained as history. Current hosted results and the accepted baseline are recorded in the [verification receipt](../../submission/VERIFICATION.md).

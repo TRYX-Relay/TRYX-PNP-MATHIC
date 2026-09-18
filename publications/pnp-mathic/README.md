@@ -1,52 +1,27 @@
-# Problem No Problem MATHIC
+# Problem No Problem — paper and reproducibility
 
-**Author: Virgil Lee Gattenby** — TRYX / ENIAD / MATHIC.
+**Virgil Lee Gattenby**
 
-Standalone public review package — 2026-09-13.
+[Read the approved paper](editions/20260918T220300Z/Problem_No_Problem_Paginated.pdf) · [Edition source and lock](editions/20260918T220300Z/README.md) · [Current submission](../../README.md)
 
-- [Canonical locked MATHIC score](../../charts/pnp/TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html)
-- [Research manuscript](MANUSCRIPT.md)
-- [Governing source body](sources/TRYX.PNP.CONTINUITY.CLOSURE.REINTRODUCTION.BENCHMARK.260831.235122Z.md)
-- [Formalization scope](../../verification/tryx-lean/PNP.md)
-- [Lean proof source](../../verification/tryx-lean/TryxProof.lean)
-- [Lean + independent-checker receipt](../../review/PNP_LEAN_VERIFICATION.RECEIPT.md)
-- [Reviewer packet](../../review/PNP_REVIEW_PACKET_v1_0.MANIFEST.md)
-- [Verification evidence](verification-evidence.json)
-- [Finite replay result](replay-result.json)
-- [Independent-check result](independent-result.json)
-- [Repository citation metadata](../../CITATION.cff)
-- [Repository provenance](../../PROVENANCE.md)
+The locked September 18 edition contains the splash, four figures, and numbered pages 1–17. `MANUSCRIPT.md` is the preserved earlier manuscript; it is not the current submission paper.
 
-From the repository root:
+## Verify from the repository root
 
 ```sh
 python3 publications/pnp-mathic/check_package.py
 ```
 
-The package verifier checks hashes, the original finite replay, and a separately generated Boolean-mask oracle covering every initial and intermediate fold state. Dependencies for the finite replay are Python 3 standard-library modules only.
+Python 3 standard library only. This checks required submission roles and hashes, preserved package hashes, the finite replay and independently generated bit-mask oracle across initial and intermediate states. It also detects the OR-to-AND negative control.
 
-Recorded benchmark:
+Recorded result: **17,902 formulas; 53,706 folds; 16,241 SAT; 1,661 UNSAT; zero disagreements.** The clause population is the 26 nonempty clauses of widths 1–3 on three variables. Formulas use 0–4 distinct clauses.
 
-```text
-FORMULAS = 17902
-FOLDS = 53706
-DISAGREEMENTS = 0
-NEGATIVE_CONTROL = OR replaced with AND: DETECTED
-```
+- [Current authority record](../../submission/AUTHORITY.md)
+- [Current submission manifest](../../submission/MANIFEST.json)
+- [Lean project and checker coverage](../../verification/tryx-lean/README.md)
+- [Current verification receipt](../../submission/VERIFICATION.md)
+- [Canonical score](../../charts/pnp/TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html) and [governing source](sources/TRYX.PNP.CONTINUITY.CLOSURE.REINTRODUCTION.BENCHMARK.260831.235122Z.md)
+- [Replay result](replay-result.json) and [independent result](independent-result.json)
+- [Citation](../../CITATION.cff) and [historical records](../../archive/README.md)
 
-The canonical MATHIC chart is a preserved locked presentation. Download/open the HTML in a browser to inspect the score. Its historical bytes are not silently rewritten.
-
-For formal verification, follow the pinned [Lean project instructions](../../verification/tryx-lean/README.md). The accepted source verification commit is `496c55eb628588d1afbb49233ab8b91ddb82a271`; workflow run `34445813111` completed successfully, including the independent Comparator/nanoda path. The public receipt records the exact pins and theorem scope.
-
-Suggested citation: Virgil Lee Gattenby. *Problem No Problem Mathic: current-state existential folding and verified semantic closure*. TRYX-PNP-MATHIC standalone public review package, 2026. Include the exact Git commit used.
-
-## Claim firewall
-
-The package establishes the stated Boolean fold identity, finite-carrier existential semantic theorem, and reproducible finite benchmark. It supplies no standard-machine polynomial runtime bound, representation-size bound, normalization-cost bound, or witness-reconstruction complexity bound establishing conventional P=NP.
-
-```text
-OTHER_PUBLIC_RELEASE_DEPENDENCY = NONE
-CROSS_RELEASE_REVIEW_ROUTING = NONE
-CONVENTIONAL_P_EQUALS_NP = NOT_ESTABLISHED
-CLAIM_PROMOTION = NONE
-```
+The verified semantic result and finite benchmark do not supply the standard-machine polynomial cost bound required for conventional P=NP. Historical receipts retain their original dates and scope.
