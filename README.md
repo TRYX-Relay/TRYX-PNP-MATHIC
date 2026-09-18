@@ -52,6 +52,13 @@ transport for playback. See the
 [`v64 lock receipt`](review/PNP_3E6B_XMAS_FORMULA_PAGE_v64.LOCK.RECEIPT.md)
 for the byte identity and validation boundary.
 
+## Locked splash poster
+
+The canonical PNP splash artwork is
+[`PNP_SPLASH_POSTER.260918.LOCKED.png`](review/figures/PNP_SPLASH_POSTER.260918.LOCKED.png).
+Its exact byte identity and visual lock are recorded in the
+[`splash-poster lock receipt`](review/PNP_SPLASH_POSTER.260918.LOCK.RECEIPT.md).
+
 ## Original development chronology
 
 The dedicated provenance receipt reconstructs the original PNP development clock separately from later recovery, formalization, Lean verification, and fortress engineering. The currently recovered active-build start is August 4, 2026 at approximately `16:11:17 AKDT`, and the original internal/local closure endpoint is the August 6 `260806.2134` ENAID execution package. The reconstructed elapsed development span is approximately `53:22:43` (`53.38` hours, `2.22` days), consistent with the user's recollection of about two and one-half days.
