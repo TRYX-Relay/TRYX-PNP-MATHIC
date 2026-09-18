@@ -6,7 +6,7 @@
   "CREATE-REPOSITORY.md": "44627e94af79af75191d4562d078ebe8ed87f582ef166378e779caccc1567851",
   "DEMONSTRATION.md": "3f1e443fa4567acd8fa54b14fc6584fa2a9988efe417d04428b962fa0f772445",
   "PROVENANCE.md": "bae6b49671d50ed1917bc33ad52b0fa31fca3d99001bcbc3d303d194bd819ed3",
-  "README.md": "b7dbdc490559a2de08af5d07ad0a1d62f20860c9d5923f0139f68646ab17753c",
+  "README.md": "9499c15bcff5fbfb9ff987dd6d363f81b193548982f4de06759e401d79fe9753",
   "charts/pnp/README.md": "9dc9e57ddb12d9362ce2de325a132a40e2969de083af3af2de238d7c1eb28d2e",
   "charts/pnp/PNP_CODEBREAKER_TRI_E6B_XMAS_FORMULA_PAGE_v64.LOCKED.html": "f8370d9114d730da95914bb3b229e5a8f17ab84b63b64b4edf85168feb7109d4",
   "charts/pnp/TRYX.PNP.LOCAL.CLOSURE.MATHIC.SCORE.LYRIC.SUCCESSOR.260905.LOCKED.html": "95b63f3ce280a494ac1be28d222bd03bc1da010e17ec6be3a1ba3438687073fb",
@@ -36,5 +36,6 @@
   "verification/tryx-lean/comparator.json": "ff15d1e566fcead2ddc22c8975a3340abdb68f34576717550a13df8c51f38bfe",
   "verification/tryx-lean/lake-manifest.json": "e6bae9e8488386fd8922d177b2571c0681ac504465ce70eea09afd25787a46b6",
   "verification/tryx-lean/lakefile.toml": "f0f74cdd3f91cfee251100f507e297205a4d303af38a9a9f6fc1227d9b472d60",
-  "verification/tryx-lean/lean-toolchain": "8190e75a201741065fe508b28955dd64dd72d090babe5f70ce6848879d68ae88"
+  "verification/tryx-lean/lean-toolchain": "8190e75a201741065fe508b28955dd64dd72d090babe5f70ce6848879d68ae88",
+  "review/PNP_3E6B_WORK_METRICS_2026-09-18.md": "a220ac46d18d101a3ccd1faf57ceb2da2c8bba1053c343349bb9c4ff9a335497"
 }

@@ -65,6 +65,21 @@ The dedicated provenance receipt reconstructs the original PNP development clock
 
 This is an elapsed development span, **not** a claim of 53.38 hands-on labor hours. Net invested work hours remain subject to sleep/rest and unrelated-work gap reconstruction. Earlier August 3-4 sizing and ubiquity-mirror runway are preserved as predevelopment provenance rather than silently folded into the formal development stopwatch.
 
+## Build time and AI drift
+
+AI drift is the worst part of the process, but it is manageable. I keep the accepted source fixed, compare revisions against it, and record the work needed to recover from regressions. Trust is welcome. Receipts are forever.
+
+| Work phase | Recorded metric | What it measures |
+|---|---|---|
+| Original PNP development, August 4–6 | Approximately **53h 22m 43s** | Existing reconstructed elapsed build-to-internal/local-closure interval; not hands-on labor |
+| E6B → TRI-E6B / 3E6B, September 14–17 | **71h 24m 40s** | Earliest recovered saved build to repaired v65 commit; actual initial start and active labor are not established |
+| 3E6B September 17 regression recovery | **6 defect areas; 1h 56m 11s** | One audit-to-repair-commit interval shared by all six defects, not six separately timed repairs or total project drift |
+| Later PNP paper production, September 17–18 | **3h 30m reported lost time** | My retrospective report of paper-recovery work; independently timed start/end boundaries are unavailable |
+
+The original PNP research clock and the later paper-production clock stay separate. Requested features and intentional redesigns are not counted as drift. Total drift hours and active labor remain unmeasured where the record is incomplete; unknown is not zero. No drift percentage is claimed from these mixed timing bases.
+
+See the [work-metrics receipt and incident accounting](review/PNP_3E6B_WORK_METRICS_2026-09-18.md) for timestamped milestones, sources, defect categories, and counting rules.
+
 ## Verified mathematical scope
 
 The Lean project contains three PNP statements:
