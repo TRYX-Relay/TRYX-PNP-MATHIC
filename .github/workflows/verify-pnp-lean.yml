@@ -172,10 +172,6 @@ jobs:
             lake exe comparator comparator.json \
             2>&1 | tee "$GITHUB_WORKSPACE/verification-logs/comparator.log"
 
-      - *logs
-          --setenv=COMPARATOR_LANDRUN="$COMPARATOR_LANDRUN" \
-          --setenv=COMPARATOR_LEAN4EXPORT="$COMPARATOR_LEAN4EXPORT" \
-          --setenv=COMPARATOR_NANODA="$COMPARATOR_NANODA" \
-          lake exe comparator comparator.json \
+      - *logsrator comparator.json \
           2>&1 | tee "$GITHUB_WORKSPACE/verification-logs/comparator.log"
     - *logs
