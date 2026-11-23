@@ -1,4 +1,8 @@
-import TryxProof
+module
+
+public import TryxProof
+
+@[expose] public section
 
 namespace TRYX.PNP.Mathic
 
