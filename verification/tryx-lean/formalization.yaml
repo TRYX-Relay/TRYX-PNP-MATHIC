@@ -1,0 +1,29 @@
+version: "v0.4"
+project:
+  name: "Problem No Problem Mathic"
+  description: "Finite Boolean assignment folding and semantic closure."
+  authors:
+    - "Virgil Lee Gattenby"
+  responsible_maintainers:
+    - "Virgil Lee Gattenby"
+classification:
+  arxiv: ["cs.CC", "math.LO"]
+sources:
+  - title: "Problem No Problem"
+    type: paper
+    relationship: formalizes
+    authors:
+      - "Virgil Lee Gattenby"
+status:
+  scope: >-
+    Three PNP semantic core declarations and three historical accounting
+    declarations selected by comparator.json. Conventional polynomial
+    machine complexity and P=NP are not established by these declarations.
+automation:
+  methods:
+    - method: agent
+      models: ["ChatGPT"]
+      framework: "TRYX MATHIC"
+review:
+  status: "self-assessed"
+  notes: "Historical Lean and Comparator verification recorded; fresh submission verification pending."
